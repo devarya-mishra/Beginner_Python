@@ -17,7 +17,7 @@ for k in range(1, 1001):
         if check in picked:
             print(f"The number {check} has already been picked!!!")
         elif check not in picked:
-            print("No the following number is not yet picked!!")
+            print("No the following number is not yet picked!!!")
         else:
             print("Wrong input entered.")
             break
