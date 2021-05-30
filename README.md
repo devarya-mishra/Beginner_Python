@@ -1,4 +1,2 @@
 # Python
-python programs by, AGENT MINION TREVOR!!
-![download](https://user-images.githubusercontent.com/65231468/120089748-cc8c7680-c11a-11eb-96e1-6934e191619e.jpeg)
-:)
+![download(1)](https://user-images.githubusercontent.com/65231468/120089837-8683e280-c11b-11eb-86b6-4f0d0d4780c9.jpeg)
