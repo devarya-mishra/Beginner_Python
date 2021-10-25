@@ -1,7 +1,9 @@
+#Calculator by Devarya Mishra
+
 logo = """
  _____________________
 |  _________________  |
-| |    Calculator   | |  .----------------.  .----------------.  .----------------.  .----------------. 
+| | Pythonista   0. | |  .----------------.  .----------------.  .----------------.  .----------------. 
 | |_________________| | | .--------------. || .--------------. || .--------------. || .--------------. |
 |  ___ ___ ___   ___  | | |     ______   | || |      __      | || |   _____      | || |     ______   | |
 | | 7 | 8 | 9 | | + | | | |   .' ___  |  | || |     /  \     | || |  |_   _|     | || |   .' ___  |  | |
@@ -16,49 +18,43 @@ logo = """
 """
 print(logo)
 
-# Calculater
+replay = True 
 
-# Adding
 def add(n1, n2):
-    op = n1 + n2
-    return op
+  return n1 + n2
 
-# Substracting
-def substract(n1, n2):
-    op = n1 - n2
-    return op
+def subtract(n1, n2):
+  return n1 - n2
 
-# Multiply
 def multiply(n1, n2):
-    op = n1 * n2
-    return op
+  return n1 * n2
 
-# Divide
 def divide(n1, n2):
-    op = n1 / n2
-    return op
+  return n1 / n2
 
-operation = {
-    '+': add,
-    '-': substract,
-    '*': multiply,
-    '/': divide
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide
 }
 def calculator():
-    not_end = True
-    num1 = int(input("Enter your number: "))
-    for i in operation:
-        print(i)
-    while not_end:
-        operation_symbol = input("Pick an operation: ")        
-        num2 = int(input("Enter your next number: "))
-        calc = operation[operation_symbol]
-        ans = calc(num1, num2)
-
-        print(f'{num1} {operation_symbol} {num2} = {ans}')
-
-        if input("Enter y to continue and n to restart: ") == 'y':
-                num1 = ans
+    num1 = float(input("What's the first number?: "))
+    for symbol in operations:
+        print(symbol)
+    replay = True
+    
+    while replay:
+        operation_symbol = input("Pick an operation from the line above: ")
+        num2 = float(input("What's the second number?: "))
+        calculation_function = operations[operation_symbol]
+        answer = calculation_function(num1, num2)
+        print(f"{num1} {operation_symbol} {num2} = {answer}")   
+        if input("Do you want to continue with your calculation(y or n): "):
+            num1 = answer
         else:
-            print("Something went wrong!")
+            replay = False
+            calculator()
+
+
 calculator()
