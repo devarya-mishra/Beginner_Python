@@ -1,5 +1,5 @@
 #Calculator by Devarya Mishra
-
+import webbrowser
 logo = """
  _____________________
 |  _________________  |
@@ -50,11 +50,14 @@ def calculator():
         calculation_function = operations[operation_symbol]
         answer = calculation_function(num1, num2)
         print(f"{num1} {operation_symbol} {num2} = {answer}")   
-        if input("Do you want to continue with your calculation(y or n): "):
+        if input("Do you want to continue with your calculation(y or n): ") == "y":
             num1 = answer
         else:
             replay = False
-            calculator()
+            print("Program is being exicuted")
+            print("pls visit my github profile for source code!")
+            webbrowser.open_new('https://github.com/devarya-mishra/Beginner_Python')
+            exit()
 
 
 calculator()
